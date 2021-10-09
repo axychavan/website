@@ -1,0 +1,136 @@
+
+body{
+    background-color:#F0ECEB;
+    text-align: center;
+}
+
+.heading {
+    display: block;
+    background: lightcyan;
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card{
+    display: inline-block;
+    background: lightcoral;
+    height: 350px;
+    width: 350px;
+    padding-top: 50px;
+    margin-bottom: 40px;
+    
+    box-shadow:0px 0px 5px 5px #C9C9C9;
+    -webkit-box-shadow:2px 2px 5px 5x #C9C9C9;
+    -moz-box-shadow:2px 2px 5px 5px #C9C9C9;
+}
+
+#caption1{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.jumps{
+    padding-top: 30px;
+    display: inline-block;
+    background: lightgrey;
+    height: 100px;
+    width: 300px;
+    text-align: left;
+    padding-left: 50px;
+    margin-bottom: 40px;
+    
+    box-shadow:0px 0px 5px 5px #C9C9C9;
+    -webkit-box-shadow:2px 2px 5px 5x #C9C9C9;
+    -moz-box-shadow:2px 2px 5px 5px #C9C9C9;
+}
+
+.table{
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.entity{
+    text-align:center;
+}
+
+.heading3{
+   text-align: left;
+   padding-left: 250px;
+}
+
+ul{
+   list-style-type: none;
+   padding-bottom: 10px;
+}
+
+.year{
+    font-weight: bold;
+}
+
+.timeline{
+    inline-size: 800px;
+    overflow-wrap: break-word;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    padding-right: 30px;
+    background: lightyellow;
+    
+    box-shadow:0px 0px 5px 5px #C9C9C9;
+    -webkit-box-shadow:2px 2px 5px 5x #C9C9C9;
+    -moz-box-shadow:2px 2px 5px 5px #C9C9C9;
+}
+
+.testimonials{
+    display: flex;
+    color:orangered;
+    inline-size: 250px;
+    
+    margin-bottom: 40px;
+}
+
+.bear{
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px;
+    border: 2px solid yellow;
+}
+
+.trump{
+    border: 2px solid yellow;
+}
+
+.names{
+    text-align: left;
+    padding: 20px;
+}
+
+.about {
+    display: inline-block;
+    background: lightgreen;
+    inline-size: 250px;
+    overflow-wrap: break-word;
+    
+    box-shadow:0px 0px 5px 5px #C9C9C9;
+    -webkit-box-shadow:2px 2px 5px 5x #C9C9C9;
+    -moz-box-shadow:2px 2px 5px 5px #C9C9C9;
+}
+
+.foot{
+    margin-top: 40px;
+    color:blue;
+    display: block;
+    padding: 50px 0;
+    height: 30px;
+    background: yellowgreen;
+}
+
+.count{
+    padding-right: 50px;
+    text-align: right;
+    font-size: 16px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
