@@ -55,8 +55,7 @@ body{
 }
 
 .heading3{
-   text-align: left;
-   padding-left: 250px;
+   text-align: center;
 }
 
 ul{
@@ -84,18 +83,17 @@ ul{
 }
 
 .testimonials{
-    display: flex;
     color:orangered;
-    inline-size: 250px;
-    
+    inline-size: 305px;
+    padding: 20px;
+    margin-left: 250px;
     margin-bottom: 40px;
 }
 
 .bear{
-    flex: 1;
-    padding: 20px;
-    margin-left: 250px;
+    
     border: 2px solid yellow;
+    margin-bottom: 20px;
 }
 
 .trump{
