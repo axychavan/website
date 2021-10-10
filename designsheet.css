@@ -52,6 +52,7 @@ body{
 
 .entity{
     text-align: center;
+    margin-left: auto;
 }
 
 .heading3{
@@ -65,6 +66,10 @@ ul{
 
 .year{
     font-weight: bold;
+}
+
+li + li {
+  margin-top: 10px;
 }
 
 .timeline{
@@ -82,8 +87,13 @@ ul{
     -moz-box-shadow:2px 2px 5px 5px #C9C9C9;
 }
 
+.wiki{
+    color:lightslategray;
+    text-align: justify-all;
+}
+
 .testimonials{
-    color:orangered;
+    color:black;
     inline-size: 305px;
     padding: 20px;
     margin-bottom: 40px;
@@ -91,17 +101,18 @@ ul{
 
 .bear{
     
-    border: 2px solid yellow;
+    border: 3px solid black;
     margin-bottom: 20px;
 }
 
 .trump{
-    border: 2px solid yellow;
+    border: 3px solid black;
 }
 
 .names{
     text-align: left;
     padding: 20px;
+    font-weight: bold;
 }
 
 .about {
@@ -125,8 +136,7 @@ ul{
 }
 
 .count{
-    padding-right: 50px;
-    text-align: right;
+    text-align: center;
     font-size: 16px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
