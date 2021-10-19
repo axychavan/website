@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Validated Survey Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/submit_icon.png" type="image/png">
+        <link rel ="stylesheet" href="css/stylesheet.css">
+        
+    </head>
+    <body>
+       
+       <header>
+           <h1> Validated Form </h1>
+       </header>
+
+       <section>
+       
+       <form action="thanks.html" autocomplete="off" onsubmit="return validation()">    
+       <table align = "center" border ="0" cellspacing = "15">   
+       <tr><td width = "160">
+       Name<td><input type="text" id="name" class="textfield" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" placeholder = "Enter your name" > 
+           <br><span id="sname"></span>
+           </td></tr>
+       
+       <tr><td>
+       Phone no.<td><label>+91&nbsp;&nbsp;</label><input onkeypress="limitKeypress(event,this.value,10)" type="number" id="phone" class="textfield" placeholder = "Enter your phone no." > 
+           <br><span id="sphone"></span>
+           </td></tr>
+       
+       <tr><td>
+       Gender<td><input type="radio" id="gender" name = "gender" >Male <input type="radio" id="gender" name = "gender" >Female <input type="radio" id="gender" name = "gender" >Prefer not to say 
+           <br><span id="sgender"></span>
+           </td></tr>
+       
+       <tr><td>
+       Date of Birth<td><input type="date" id="dob" class="textfield" size = "25" >
+           <br><span id="sdob"></span>
+           </td></tr>
+       
+       <tr><td>
+       Age<td><input onkeypress="limitKeypress(event,this.value,2)" type="number" id="age" class="textfield" placeholder = "Enter your age" > 
+           <br><span id="sage"></span>
+           </td></tr>
+              
+       <tr><td>
+       Which option best describes you ?<td><select id="option" name="option" class="textfield" ><option value="select">--------Select--------</option><option>Student</option><option>Educator</option><option>Working Professional</option></select>
+           <br><span id="soption"></span>
+           </td></tr>
+       
+       <tr><td>
+       Email<td><input type="text" id="email" class="textfield" placeholder = "Enter your Email" > 
+           <br><span id="semail"></span>
+           </td></tr>
+       
+       <tr><td>
+       Languages you know :<td><input type="checkbox" checked>English <input type="checkbox">Hindi <input type="checkbox">Marathi 
+           <br><span id="slanguage"></span>
+           </td></tr>       
+       
+       <tr><td>
+       Any Comments or Suggestions ?<td><textarea class="textfield" rows="4" cols="32" placeholder = "Enter any comments or suggestions" ></textarea>
+           <br><span id="scomments"></span>
+           </td></tr>
+       
+       <tr><td align = "center" colspan = "2" >
+       <input type="submit" id = "submitbtn" class = "button" />
+        
+       </table>
+       </form>    
+       </section>
+       
+       <footer>
+            <div> 
+            A Survey Form. <br>
+            &copy; Copyright 2021. All rights reserved.<br>
+            Hit counter : 
+            </div>
+        </footer>
+        
+ 
+        
+        
+        <script type = "text/javascript">
+         
+         function alert() {
+            alert("I am an alert box!");
+            }
+    
+        function validation(){
+            var name = document.getElementById('name').value;
+            var phone = document.getElementById('phone').value;
+            var getSelectedValue = document.querySelector('input[name="gender"]:checked');
+            var dob = document.getElementById('dob').value;
+            var age = document.getElementById('age').value;
+            var email = document.getElementById('email').value;
+            
+            if(name == ""){
+                document.getElementById('sname').innerHTML="Field cannot be empty.";
+                return false;
+            }
+            
+            else if(name.length<2){
+                document.getElementById('sname').innerHTML="Name must be more than 2 Characters.";
+                return false;
+            }
+            else{
+                document.getElementById('sname').innerHTML="";
+            }
+            
+            if(phone == ""){
+                document.getElementById('sphone').innerHTML="Field cannot be empty.";
+                return false;
+            }
+            if(phone.length<10){
+                document.getElementById('sphone').innerHTML="Phone number consists of 10 digits.";
+                return false;
+            }
+            else{
+                document.getElementById('sphone').innerHTML="";
+            }
+                              
+            if(getSelectedValue != null){
+                document.getElementById('sgender').innerHTML="";
+            }
+            else{
+                document.getElementById('sgender').innerHTML="Please select an option.";
+            }
+            
+            if(dob == ""){
+                document.getElementById('sdob').innerHTML="Field cannot be empty";
+            }
+            else{
+                document.getElementById('sdob').innerHTML="";
+            }
+            
+            if(age == ""){
+                document.getElementById('sage').innerHTML="Field cannot be empty.";
+                return false;
+            }
+            if(age<=15 || age>=100){
+                document.getElementById('sage').innerHTML="Age must be between (16-99).";
+                return false;
+            }
+            else{
+                document.getElementById('sage').innerHTML="";
+            }
+            
+            if (document.getElementById('option').value== "select"){
+                document.getElementById('soption').innerHTML="Please select an option.";
+                return false; 
+            }
+            else{
+                document.getElementById('soption').innerHTML="";
+            }
+            
+            if(email == ""){
+                document.getElementById('semail').innerHTML="Field cannot be empty";
+                return false;
+            }
+            if(email.indexOf('@')<=0){
+                document.getElementById('semail').innerHTML="Invalid position of '@'";
+                return false;
+            }
+            else if(email.indexOf('.')<=0){
+                document.getElementById('semail').innerHTML="Invalid position of '.'";
+                return false;
+            }
+            else{
+                document.getElementById('semail').innerHTML="";
+            }
+            }
+            
+            <!-- Set the length of phone no. field -->
+            function limitKeypress(event, value, maxLength) {
+            if (value != undefined && value.toString().length >= maxLength) {
+                event.preventDefault();
+            }
+            }
+            
+            <!-- Restricting input of "-,+,e" and also avoiding copy paste-->
+            var inputBox = document.getElementById("phone");
+            var invalidChars = ["-","+","e",];
+            inputBox.addEventListener("input", function() {
+              this.value = this.value.replace(/[e\+\-]/gi, "");
+            });
+
+            inputBox.addEventListener("keydown", function(e) {
+              if (invalidChars.includes(e.key)) {
+                e.preventDefault();
+              }
+            });
+            
+        </script>
+    </body>
+</html>
